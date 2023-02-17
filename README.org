@@ -47,14 +47,14 @@
    
 ** /Fork/ du squelette de projet GitLab
 
-   Vous êtes automatiquement membre du groupe =CRYPTO-2022=. Ce groupe contient les projets pour chaque TME, auxquels vous pouvez accéder en lecture seule. Chaque projet est un squelette que vous allez compléter. Il fournit quelques sources : exemples, tests, interfaces, etc. Pour réaliser le TME et compléter ce projet, vous devez d’abord en faire *une copie* (fork) qui sera *privée* à votre binôme et vous et sur laquelle vous allez travailler.
+   Vous êtes automatiquement membre du groupe =CRYPTO-2023=. Ce groupe contient les projets pour chaque TME, auxquels vous pouvez accéder en lecture seule. Chaque projet est un squelette que vous allez compléter. Il fournit quelques sources : exemples, tests, interfaces, etc. Pour réaliser le TME et compléter ce projet, vous devez d’abord en faire *une copie* (fork) qui sera *privée* à votre binôme et vous et sur laquelle vous allez travailler.
    
 *Note* : assurez-vous que votre fenêtre de navigateur occupe tout l’écran. Si la fenêtre est trop petite, certains menus de GitLab sont remplacés par des icônes, et vous ne trouverez plus les noms des menus tels qu’indiqués dans la suite de l’énoncé.
 
 Pour chaque binôme, *un seul d’entre vous* devra faire un /fork/ de ce squelette de projet, puis y ajouter son camarade de binôme, et ainsi partager le projet sous GitLab. Pour cela :
 
-  - Dans l’onglet =Projects > Your projects=, sélectionnez le projet =CRYPTO-2022/TME= (où =TME= correspond au nom du projet du TME en cours), cliquez sur le bouton =Fork= puis cliquez sur votre nom. Ceci crée le projet personnel privé nommé =username/TME= (où =username= est votre numéro d’étudiant). Vous travaillerez désormais dans ce projet, où vous avez les droits d’écriture.
-  - Dans l’onglet =Projects > Your projects=, sélectionnez ce projet privé. Il doit avoir pour nom =username/TME= et porter la mention =Forked from CRYPTO-2022/TME=. Cliquez sur =Settings= dans le menu de gauche, puis =Members=. *Invitez votre binôme* en lui donnant pour rôle =Maintainer=.
+  - Dans l’onglet =Projects > Your projects=, sélectionnez le projet =CRYPTO-2023/TME= (où =TME= correspond au nom du projet du TME en cours), cliquez sur le bouton =Fork= puis cliquez sur votre nom. Ceci crée le projet personnel privé nommé =username/TME= (où =username= est votre numéro d’étudiant). Vous travaillerez désormais dans ce projet, où vous avez les droits d’écriture.
+  - Dans l’onglet =Projects > Your projects=, sélectionnez ce projet privé. Il doit avoir pour nom =username/TME= et porter la mention =Forked from CRYPTO-2023/TME=. Cliquez sur =Settings= dans le menu de gauche, puis =Members=. *Invitez votre binôme* en lui donnant pour rôle =Maintainer=.
 
     Si c’est votre binôme qui a créé le projet et vous y a ajouté avec les bons droits, vous devriez le trouver dans l’onglet =Projects > Your projects= sous le nom =partnername/TME= où =partnername= est le numéro d’étudiant de votre binôme.
 
@@ -68,7 +68,7 @@ Pour chaque binôme, *un seul d’entre vous* devra faire un /fork/ de ce squele
 
    Pour effectuer une copie locale de votre projet, vous devez d’abord récupérer l’adresse du projet. Vous la trouverez sur la page GitLab de votre projet, en cliquant sur l’icône =Clone= à côté du bouton =Fork=. Copiez la chaîne de caractères sous =Clone with HTTPS=.
 
-   *Prenez garde* à bien importer votre projet de binôme, =username/TME=, et pas =CRYPTO-2022/TME=. Vous ne pourrez pas travailler dans ce dernier, qui est en lecture seule.
+   *Prenez garde* à bien importer votre projet de binôme, =username/TME=, et pas =CRYPTO-2023/TME=. Vous ne pourrez pas travailler dans ce dernier, qui est en lecture seule.
 
    Utilisez votre terminal pour vous rendre dans le repertoire où vous souhaitez copier le projet. Puis entrez la commande =git clone adresse-du-projet=, où =adresse-du-projet= est l’adresse que vous avez récupérée.
    
@@ -165,7 +165,7 @@ Vous pouvez consulter l’état des fichiers sur le serveur GitLab en utilisant 
 
    #+begin_src shell
      # Seulement la première fois
-     git remote add upstream https://stl.algo-prog.info/crypto-2022/tme3-arithmetique_dlp
+     git remote add upstream https://stl.algo-prog.info/crypto-2023/tme3-arithmetique_dlp
    #+end_src
 
    Pour les suivantes, elles devront être effectuées à chaque modification du sujet de TME.
