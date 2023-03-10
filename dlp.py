@@ -97,17 +97,17 @@ def factor(n):
 
 #Q3
 def order(a, p, factors_p_minus1):
-    a %= p
-    order_a = p - 1
+    a %= p #if a > p
+    ord_a = p - 1
     for (q, e) in factors_p_minus1:
-        order_a //= q**e
-        a2 = exp(a, order_a, p)
+        ord_a //= q**e
+        aa = exp(a, ord_a, p)
         for i in range(e + 1):
-            if a2 == 1:
+            if aa == 1:
                 break
-            a2 = exp(a2, q, p)
-            order_a *= q
-    return order_a
+            aa = exp(aa, q, p)
+            ord_a *= q
+    return ord_a
 
 
 #Q4
