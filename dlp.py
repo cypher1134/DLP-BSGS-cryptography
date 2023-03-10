@@ -76,21 +76,21 @@ def exp(a,N,p):
 
 #Q2
 def factor(n):
-    def gen_all_factors(n):
-        L=[]
-        i=2 
-        while n>1: 
-            while n%i==0: 
-                L.append(i)
-                n=n/i 
-            i=i+1
-        return L
-    
+    factors = []
+    i = 2
+    while i * i <= n:
+        count = 0
+        while n % i == 0:
+            count += 1
+            n //= i
+        if count > 0:
+            factors.append((i, count))
+        i += 1
+    if n > 1:
+        factors.append((n, 1))
+    return factors
 
-    factors_all = list(gen_all_factors(n))
 
-    factors_set = set(factors_all)
-    return [(p, factors_all.count(p)) for p in factors_set]
 
 
 
@@ -112,11 +112,16 @@ def order(a, p, factors_p_minus1):
 
 #Q4
 def find_generator(p, factors_p_minus1):
-    
-    a = random.randint(0, p - 1)
-    while order(a, p, factors_p_minus1) != p - 1:
-        a = random.randint(0, p - 1)
-    return a
+    for g in range(2, p):
+        is_generator = True
+        for factor, ex in factors_p_minus1:
+            f = exp(factor, ex,p)
+            if exp(g, f, p) == 1:
+                is_generator = False
+                break
+        if is_generator:
+            return g
+    return None
 
 
 
