@@ -1,4 +1,3 @@
-/CRYPTO-2022/tme3-arithmetique_dlp/.gitlab-ci.yml
 image: python:latest
 
 stages:
