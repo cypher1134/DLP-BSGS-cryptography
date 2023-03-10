@@ -134,19 +134,16 @@ def generate_safe_prime(k):
 
 
 #Q6
+
+import math
 def bsgs(n, g, p):
-    s = int(sqrt(p)) + 1
-    tabg = dict()
-    gs = exp(g, s, p)
-    invgs = inv_mod(gs, p)
-    tabg[n] = 0
-    v = n
-    for q in range(s):
-        tabg[v] = q
-        v = (v * invgs) % p
-    tabb = 1
-    for r in range(s):
-        if tabb in tabg:
-            log = (r + tabg[tabb] * s) % (p - 1)
-            return log
-        tabb = (tabb * g) % p
+    m = math.ceil(math.sqrt(p))
+    # Calcul des valeurs de gauche L et droite R
+    L = {exp(g, i, p): i for i in range(m)}
+    c = exp(g, m*(p-2), p)
+    R = { (n * exp(c, j, p)) % p: j for j in range(m)}
+    # Recherche d'une collision entre L et R
+    for x in L:
+        if x in R:
+            return (L[x] + m*R[x]) % p
+    return None
